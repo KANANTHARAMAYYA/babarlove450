@@ -7,7 +7,7 @@ int coinchange(int arr[],int total,int n){
         return 0;
     if(total == 0)
         return 1;
-    return coinchange(arr,total-arr[n],n) + coinchange(arr,total,n-1);
+    return coinchange(arr,total-arr[n-1],n) + coinchange(arr,total,n-1);
 }
 
 //table coinchange
@@ -21,8 +21,8 @@ int main()
     int n,m;
     // cin>>n>>m;
     n = 4; 
-    m = 3;
     int s[] = {1,2,3};
-    cout<<"recursive method : "<<coinchange(s,n,m-1)<<endl;
+    m = 3;
+    cout<<"recursive method : "<<coinchange(s,n,m)<<endl;
     return 0;
 }
