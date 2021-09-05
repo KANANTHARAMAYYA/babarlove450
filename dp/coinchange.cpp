@@ -3,18 +3,12 @@ using namespace std;
 
 //recur coinchange
 int coinchange(int arr[],int total,int n){
-    cout<<total<<endl;
-    if(n == 0 or total < 0)
+
+    if(n <= 0 or total < 0)
         return 0;
     if(total == 0)
         return 1;
-    int ways = 0;
-    for(int i = 0; i < n; i++){
-        if(total- arr[i]> 0){
-            ways += coinchange(arr,total-arr[i],n-1) + coinchange(arr,total,n-1);
-        }
-    }
-    return ways;
+    return coinchange(arr,total-arr[n],n-1) + coinchange(arr,total,n-1);
 }
 
 //table coinchange
@@ -28,8 +22,8 @@ int main()
     cin.tie(NULL);
     int n,m;
     cin>>n>>m;
-    n = 4 ; m = 3;
+    n = 10 ; m = 3;
     int s[] = {1,2,3};
-    cout<<"recursive method : "<<coinchange(s,n,m)<<endl;
+    cout<<"recursive method : "<<coinchange(s,n,m-1)<<endl;
     return 0;
 }
