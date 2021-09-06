@@ -1,1 +1,11 @@
 all set time to run
+
+CPP COMPARATOR
+
+
+
+LOWER BOUND(>= k): (LOG(N)) first index greater than k
+    auto it = lower_bound(v.begin(),v.end(), k);
+
+UPPER BOUND(>k): (LOG(N)) First index value greater than k
+    auto it = upper_bound(v.begin,v.end(),k);
