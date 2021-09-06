@@ -56,6 +56,7 @@ int main(){
     int arr[] = {10, 7, 8, 9, 1, 5,11};    
     // for(int i =0 ;i < n; ++i)
     //     cin>>arr[i];
+    //testing git ignore
     cout<<kth_element(arr,0,n-1,k)<<endl;
     return 0;
 }
