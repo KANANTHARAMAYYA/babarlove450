@@ -1,7 +1,40 @@
 all set time to run
 
 CPP COMPARATOR
+bool compare(int a,int b){
+    return a>b;
+}
+bool comparemap(pair<int,int> a,pair<int,int> b){
+    return a.second > b.second;
+}
+//set COMPARATOR
+    class compare{
+        public:
+        bool operator()(const int &a,const int &b){
+            return a > b;
+        }
+    }
+    //pass the class as a parameter of set
+    set<int,compare> st;
 
+//heap or PRiority queue
+    //min heap
+      class compare{
+        public:
+        bool operator()(const int &a,const int &b){
+            return a > b;
+        }
+      }
+    priority_queue<int,vector<int> , compare> pq;
+
+    //max heap
+      class compare{
+        public:
+        bool operator()(const int &a,const int &b){
+            return a < b;
+        }
+      }
+    priority_queue<int,vector<int> , compare> pq;
 
 
 LOWER BOUND(>= k): (LOG(N)) first index greater than k

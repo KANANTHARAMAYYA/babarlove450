@@ -11,6 +11,7 @@ int main(){
         bits[i] += (1 << n);
 
     }
+    
 
     return 0;
 }
